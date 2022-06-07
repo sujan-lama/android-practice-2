@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.a20220606_sujanlama_nycschools.model.SchoolSAT
-import com.example.a20220606_sujanlama_nycschools.repository.SchoolRepository
+import com.example.a20220606_sujanlama_nycschools.repository.Repository
 import com.example.a20220606_sujanlama_nycschools.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -13,7 +13,7 @@ import java.net.UnknownHostException
 import javax.inject.Inject
 
 @HiltViewModel
-class SchoolDetailViewModel @Inject constructor(private val schoolRepository: SchoolRepository) :
+class SchoolDetailViewModel @Inject constructor(private val repository: Repository) :
     ViewModel() {
 
     private val _schoolSat = MutableLiveData<Resource<SchoolSAT>>()
@@ -27,7 +27,7 @@ class SchoolDetailViewModel @Inject constructor(private val schoolRepository: Sc
 
         viewModelScope.launch {
             try {
-                val resource = schoolRepository.getSchoolsSAT()
+                val resource = repository.getSchoolsSAT()
                 if (resource.isSuccessful) {
                     val detail = resource.body()?.firstOrNull { it.id == schoolId }
                     _schoolSat.value =

@@ -16,8 +16,6 @@ import com.example.a20220606_sujanlama_nycschools.ui.schoolList.adapter.OnSchool
 import com.example.a20220606_sujanlama_nycschools.ui.schoolList.adapter.SchoolListAdapter
 import com.example.a20220606_sujanlama_nycschools.ui.schoolList.viewmodel.SchoolViewModel
 import com.example.a20220606_sujanlama_nycschools.utils.STATUS
-import com.example.a20220606_sujanlama_nycschools.utils.hide
-import com.example.a20220606_sujanlama_nycschools.utils.show
 import dagger.hilt.android.AndroidEntryPoint
 
 

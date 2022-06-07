@@ -7,6 +7,8 @@ import com.example.a20220606_sujanlama_nycschools.api.ApiHelper
 import com.example.a20220606_sujanlama_nycschools.api.ApiHelperImpl
 import com.example.a20220606_sujanlama_nycschools.api.ApiService
 import com.example.a20220606_sujanlama_nycschools.constant.API
+import com.example.a20220606_sujanlama_nycschools.repository.Repository
+import com.example.a20220606_sujanlama_nycschools.repository.SchoolRepository
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
@@ -63,4 +65,9 @@ class AppModule {
     @Provides
     @Singleton
     fun providesApiHelper(apiHelperImpl: ApiHelperImpl): ApiHelper = apiHelperImpl
+
+    @Provides
+    @Singleton
+    fun providesBaseRepository(schoolRepository: SchoolRepository): Repository =
+        schoolRepository
 }
