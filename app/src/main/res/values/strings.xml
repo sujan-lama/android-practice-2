@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">20220606-SujanLama-NYCSchools</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sat">SAT:</string>
+    <string name="number_of_test_takers">Number of Test Takers :</string>
+    <string name="writing_average_score">Writing Average Score:</string>
+    <string name="math_average_score">Math Average Score:</string>
+    <string name="critical_reading_average_score">Critical Reading Average Score:</string>
+    <string name="show_details">Show Details</string>
+</resources>
